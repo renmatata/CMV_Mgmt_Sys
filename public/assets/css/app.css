@@ -1,0 +1,4 @@
+/* body{
+    background-image: url("{{ asset('assets/images/about.jpg') }}"); 
+    z-index: -1;
+} */

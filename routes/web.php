@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthManager;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,11 +17,12 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home ');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/auth.login', function (){
-    return view('login');
-});
+
+Route::get('/login', [AuthManager::class, 'login'])->name("login"); 
+Route::post('/login', [AuthManager::class, 'loginPost '])->name('login.post'); 
+Route::get('/register',[AuthManager::class, 'register'])->name('register');

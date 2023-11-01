@@ -37,6 +37,11 @@
   body, html {
       height: 100%;
       font-family: Poppins-Regular, sans-serif;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      overflow: hidden;
   }
   
   /*---------------------------------------------*/
@@ -168,6 +173,8 @@
     justify-content: center;
     align-items: center;
     padding: 15px;
+    background-image: url("{{ asset('assets/images/about.jpg') }}"); 
+    
     background: #9053c7;
     background: -webkit-linear-gradient(-135deg, #000000, #55EFC4);
     background: -o-linear-gradient(-135deg, #000000, #55EFC4);
@@ -188,7 +195,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 120px 90px 80px 80px;
+    padding: 100px 90px 80px 80px;
   }
   
   /*------------------------------------------------------------------
@@ -361,7 +368,7 @@
   
   @media (max-width: 992px) {
     .wrap-login100 {
-      padding: 177px 90px 33px 85px;
+      padding: 100px 90px 80px 85px;
     }
   
     .login100-pic {
@@ -460,3 +467,4 @@
       opacity: 1;
     }
   }
+  
