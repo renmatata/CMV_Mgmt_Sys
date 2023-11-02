@@ -39,3 +39,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/login', [AuthManager::class, 'login'])->name('login'); 
 Route::post('/login', [AuthManager::class, 'loginPost'])->name('login.post'); 
 Route::get('/register',[AuthManager::class, 'register'])->name('register');
+Route::get('/logout',[AuthManager::class, 'logout'])->name('logout');
+//Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+// Route::get('', [AuthManager::class,''])->name->name('logout');

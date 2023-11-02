@@ -33,20 +33,20 @@
                     </span>
                 </div>
 
-                <div class="row mb-0">
+                <!-- <div class="row mb-0">
                     <div class="col-md-6 offset-md-4">
                         <button type="submit" class="btn btn-primary">
                             {{ __('Register') }}
                         </button>
                     </div>
-                </div>
+                </div> -->
 
-                <!-- <div class="container-login100-form-btn">
+                <div class="container-login100-form-btn">
                     <button type="submit" class="login100-form-btn">
-                        <a href="{{ route('home') }}" class="btn btn-primary">Submit</a>
+                        <a href="{{ route('home') }}"></a>
                         {{ __('Login') }}
                     </button>
-                </div> -->
+                </div>
 
                 <div class="text-center p-t-12">
                     <span class="txt1">
