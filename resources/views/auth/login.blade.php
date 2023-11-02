@@ -11,7 +11,8 @@
                 <img src="{{ asset('assets/images/cmv_logo.png') }}" alt="IMG">
             </div>
 
-            <form action="{{route('login.post')}}" method="POST" class="login100-form validate-form">
+            <form method="POST" action="{{ route('login.post') }}" class="login100-form validate-form">
+                @csrf
                 <span class="login100-form-title">
                     Login
                 </span>
@@ -25,18 +26,27 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Password is required">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
+                    <input class="input100" type="password" name="password" placeholder="Password">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-lock" aria-hidden="true"></i>
                     </span>
                 </div>
 
-                <div class="container-login100-form-btn">
-                    <button type="submit" class="login100-form-btn">
-                        {{ __('Register') }}
-                    </button>
+                <div class="row mb-0">
+                    <div class="col-md-6 offset-md-4">
+                        <button type="submit" class="btn btn-primary">
+                            {{ __('Register') }}
+                        </button>
+                    </div>
                 </div>
+
+                <!-- <div class="container-login100-form-btn">
+                    <button type="submit" class="login100-form-btn">
+                        <a href="{{ route('home') }}" class="btn btn-primary">Submit</a>
+                        {{ __('Login') }}
+                    </button>
+                </div> -->
 
                 <div class="text-center p-t-12">
                     <span class="txt1">

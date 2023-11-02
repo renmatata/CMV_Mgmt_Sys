@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Auth;
 class AuthManager extends Controller
 {
     function login(){
-        return view('login');
+        return view('auth.login');
     }
 
     function register(){
-        return view('register');
+        return view('auth.register');
     }
 
-    function loginPost(Request $request){
+    public function loginPost(Request $request){
         $request->validate([
             'username'=> 'required',
             'password'=> 'required'
@@ -23,6 +23,8 @@ class AuthManager extends Controller
 
         $credentials = $request->only('username','password');
         if(Auth::attempt($credentials)){
+            // return view('home');
+            // return redirect()->route('home');
             return redirect()->intended(route('home'));
         }
         return redirect(route('login'))->with("error", "Login failed");
