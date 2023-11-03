@@ -33,14 +33,6 @@
                     </span>
                 </div>
 
-                <!-- <div class="row mb-0">
-                    <div class="col-md-6 offset-md-4">
-                        <button type="submit" class="btn btn-primary">
-                            {{ __('Register') }}
-                        </button>
-                    </div>
-                </div> -->
-
                 <div class="container-login100-form-btn">
                     <button type="submit" class="login100-form-btn">
                         <a href="{{ route('home') }}"></a>
