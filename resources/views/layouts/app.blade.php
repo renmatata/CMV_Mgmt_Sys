@@ -76,6 +76,9 @@
             @yield('content')
         </main>
     </div>
+
+    <x-sidebar-menu />
+    
     @stack('scripts')
 </body>
 

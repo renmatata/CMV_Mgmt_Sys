@@ -1,8 +1,11 @@
-<link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
+@extends('auth.layout')
+@section('title', 'SidebarMenu')
+@section('content')
 
 <div class="sidebar close">
     <div class="logo-details">
-        <i class='bx bxl-c-plus-plus'></i>
+        <img src="{{ asset('assets/images/cmv_logo.png') }}" alt="IMG" width="50px">
+        <!-- <i class='bx bxl-c-plus-plus'></i> -->
         <span class="logo_name">CodingLab</span>
     </div>
     <ul class="nav-links">
@@ -129,3 +132,5 @@
 @push('scripts')
 <script src="{{ asset('js/sidebar.js') }}"></script>
 @endpush
+
+@endsection
