@@ -10,6 +10,7 @@ body{
   overflow: hidden;
 }
 .sidebar{
+  margin-top: 60px;
   position: fixed;
   top: 0;
   left: 0;
@@ -65,7 +66,7 @@ body{
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li:hover{
-  background: #1d1b31;
+  background: #276733;
 }
 .sidebar .nav-links li .iocn-link{
   display: flex;
@@ -109,7 +110,7 @@ body{
 .sidebar .nav-links li .sub-menu{
   padding: 6px 6px 14px 80px;
   margin-top: -10px;
-  background: #1d1b31;
+  background: #276733;
   display: none;
 }
 .sidebar .nav-links li.showMenu .sub-menu{
@@ -213,7 +214,7 @@ body{
 }
 .home-section{
   position: relative;
-  background: #E4E9F7;
+  background: #F6F9F6;
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
@@ -223,6 +224,16 @@ body{
 .sidebar.close ~ .home-section{
   left: 78px;
   width: calc(100% - 78px);
+}
+.bx-menu{
+  height: 50px;
+  /* min-width: 78px; */
+  /* text-align: center; */
+  line-height: 50px;
+  color: #000;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .home-content{
   display: flex;

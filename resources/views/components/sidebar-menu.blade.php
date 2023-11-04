@@ -3,19 +3,21 @@
 @section('content')
 
 <div class="sidebar close">
-    <div class="logo-details">
+    <!-- <div class="logo-details">
         <img src="{{ asset('assets/images/cmv_logo.png') }}" alt="IMG" width="50px">
-        <!-- <i class='bx bxl-c-plus-plus'></i> -->
+        <i class='bx bxl-c-plus-plus'></i>
         <span class="logo_name">CodingLab</span>
-    </div>
+    </div> -->
+
     <ul class="nav-links">
+
         <li>
             <a href="#">
                 <i class='bx bx-grid-alt'></i>
                 <span class="link_name">Dashboard</span>
             </a>
             <ul class="sub-menu blank">
-                <li><a class="link_name" href="#">Category</a></li>
+                <li><a class="link_name" href="#">Dashboard</a></li>
             </ul>
         </li>
         <li>
@@ -109,6 +111,7 @@
             </ul>
         </li>
         <li>
+            <i class='bx bx-log-out'></i>
             <div class="profile-details">
                 <div class="profile-content">
                     <img src="image/profile.jpg" alt="profileImg">
@@ -117,16 +120,16 @@
                     <div class="profile_name">Prem Shahi</div>
                     <div class="job">Web Desginer</div>
                 </div>
-                <i class='bx bx-log-out'></i>
+                <!-- <i class='bx bx-log-out'></i> -->
             </div>
         </li>
     </ul>
 </div>
 <section class="home-section">
-    <div class="home-content">
+    <!-- <div class="home-content">
         <i class='bx bx-menu'></i>
         <span class="text">Drop Down Sidebar</span>
-    </div>
+    </div> -->
 </section>
 
 @push('scripts')

@@ -21,7 +21,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container" style="margin-left:13px">
                 <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a> -->
@@ -32,6 +32,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+                        <div class="home-content">
+                            <i class='bx bx-menu'></i>
+                            <!-- <span class="text">Drop Down Sidebar</span> -->
+                        </div>
 
                     </ul>
 
@@ -78,7 +82,7 @@
     </div>
 
     <x-sidebar-menu />
-    
+
     @stack('scripts')
 </body>
 
