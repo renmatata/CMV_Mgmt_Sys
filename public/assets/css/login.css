@@ -28,7 +28,7 @@
   /*//////////////////////////////////////////////////////////////////
   [ RESTYLE TAG ]*/
   
-  * {
+  /* * {
       margin: 0px; 
       padding: 0px; 
       box-sizing: border-box;
@@ -42,7 +42,7 @@
       -o-background-size: cover;
       background-size: cover;
       overflow: hidden;
-  }
+  } */
   
   /*---------------------------------------------*/
   a {

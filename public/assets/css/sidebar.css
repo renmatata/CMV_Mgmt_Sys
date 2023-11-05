@@ -1,6 +1,6 @@
 /* Google Fonts Import Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 }
 body{
   overflow: hidden;
-}
+} */
 .sidebar{
   margin-top: 60px;
   position: fixed;
@@ -17,7 +17,7 @@ body{
   height: 100%;
   width: 260px;
   background: #558B57;
-  z-index: 100;
+  /* z-index: 100; */
   transition: all 0.5s ease;
 }
 .sidebar.close{
@@ -225,17 +225,17 @@ body{
   left: 78px;
   width: calc(100% - 78px);
 }
-.bx-menu{
+/* .bx-menu{
   height: 50px;
-  /* min-width: 78px; */
-  /* text-align: center; */
+  min-width: 78px;
+  text-align: center;
   line-height: 50px;
   color: #000;
   font-size: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-}
-.home-content{
+} */
+/* .home-content{
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -252,7 +252,7 @@ body{
 .home-section .home-content .text{
   font-size: 26px;
   font-weight: 600;
-}
+} */
 
 @media screen and (max-width: 400px){
   .sidebar{

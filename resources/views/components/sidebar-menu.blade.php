@@ -111,7 +111,11 @@
             </ul>
         </li>
         <li>
-            <i class='bx bx-log-out'></i>
+            <a href="#">
+                <i class='bx bx-log-out'></i>
+                <span class="link_name">Logout</span>
+            </a>
+            <!-- <i class='bx bx-log-out'><a class="link_name" href="#">Setting</a></i>
             <div class="profile-details">
                 <div class="profile-content">
                     <img src="image/profile.jpg" alt="profileImg">
@@ -120,17 +124,17 @@
                     <div class="profile_name">Prem Shahi</div>
                     <div class="job">Web Desginer</div>
                 </div>
-                <!-- <i class='bx bx-log-out'></i> -->
-            </div>
+                logout icon here
+            </div> -->
         </li>
     </ul>
 </div>
-<section class="home-section">
-    <!-- <div class="home-content">
+<!-- <section class="home-section">
+    <div class="home-content">
         <i class='bx bx-menu'></i>
         <span class="text">Drop Down Sidebar</span>
-    </div> -->
-</section>
+    </div>
+</section> -->
 
 @push('scripts')
 <script src="{{ asset('js/sidebar.js') }}"></script>
