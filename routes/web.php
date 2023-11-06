@@ -22,6 +22,7 @@ Route::get('/', function () {
 // Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', 'HomeController@index')->middleware('home');
 
 Route::get('/login', [AuthManager::class, 'login'])->name('login'); 
 Route::post('/login', [AuthManager::class, 'loginPost'])->name('login.post'); 

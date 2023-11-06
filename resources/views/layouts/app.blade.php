@@ -14,23 +14,29 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>
 
-    <x-header-menu />
-
-    <div id="app">
-        <main class="py-4">
-            @yield('content')
-        </main>
+    <div>
+        <x-header-menu />
+    </div>
+    <div>
+        <x-sidebar-menu />
     </div>
 
-    <x-sidebar-menu />
+    <!-- <main class="content">
+        @yield('content')
+    </main> -->
 
     @stack('scripts')
+    <!-- Include the sidebar JavaScript -->
+    <script src="{{ asset('assets/js/sidebar.js') }}"></script>
+
 </body>
 
 </html>

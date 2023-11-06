@@ -1,16 +1,5 @@
-@extends('auth.layout')
-@section('title', 'SidebarMenu')
-@section('content')
-
 <div class="sidebar close">
-    <!-- <div class="logo-details">
-        <img src="{{ asset('assets/images/cmv_logo.png') }}" alt="IMG" width="50px">
-        <i class='bx bxl-c-plus-plus'></i>
-        <span class="logo_name">CodingLab</span>
-    </div> -->
-
     <ul class="nav-links">
-
         <li>
             <a href="#">
                 <i class='bx bx-grid-alt'></i>
@@ -116,28 +105,18 @@
                 <span class="link_name">Logout</span>
             </a>
             <!-- <i class='bx bx-log-out'><a class="link_name" href="#">Setting</a></i>
-            <div class="profile-details">
-                <div class="profile-content">
-                    <img src="image/profile.jpg" alt="profileImg">
-                </div>
-                <div class="name-job">
-                    <div class="profile_name">Prem Shahi</div>
-                    <div class="job">Web Desginer</div>
-                </div>
-                logout icon here
-            </div> -->
+    <div class="profile-details">
+        <div class="profile-content">
+            <img src="image/profile.jpg" alt="profileImg">
+        </div>
+        <div class="name-job">
+            <div class="profile_name">Prem Shahi</div>
+            <div class="job">Web Desginer</div>
+        </div>
+        logout icon here
+    </div> -->
         </li>
     </ul>
 </div>
-<!-- <section class="home-section">
-    <div class="home-content">
-        <i class='bx bx-menu'></i>
-        <span class="text">Drop Down Sidebar</span>
-    </div>
-</section> -->
 
-@push('scripts')
-<script src="{{ asset('js/sidebar.js') }}"></script>
-@endpush
-
-@endsection
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/sidebar.css') }}">
