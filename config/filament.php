@@ -87,9 +87,9 @@ return [
     'auth' => [
         'guard' => env('FILAMENT_AUTH_GUARD', 'web'),
         'pages' => [
-            'login-view' => 'auth.login', // Change 'auth.login' to the path of your custom view
+            // 'login-view' => 'auth.login', // Change 'auth.login' to the path of your custom view
 
-            // 'login' => \Filament\Http\Livewire\Auth\Login::class,
+            'login' => \Filament\Http\Livewire\Auth\Login::class,
         ],
     ],
 
