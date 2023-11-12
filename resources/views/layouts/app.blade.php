@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'CMV - Home') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -21,22 +21,13 @@
 </head>
 
 <body>
+    <x-header-menu />
 
-    <div>
-        <x-header-menu />
-    </div>
-    <div>
-        <x-sidebar-menu />
-    </div>
-
-    <!-- <main class="content">
-        @yield('content')
-    </main> -->
-
+    <x-sidebar-menu />
     @stack('scripts')
     <!-- Include the sidebar JavaScript -->
-    <script src="{{ asset('assets/js/sidebar.js') }}"></script>
-
+    <script src="{{ asset('assets/js/login.js') }}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
 </body>
 
 </html>
