@@ -24,10 +24,12 @@
     <x-header-menu />
 
     <x-sidebar-menu />
-    @stack('scripts')
+    <!-- @stack('scripts') -->
     <!-- Include the sidebar JavaScript -->
-    <script src="{{ asset('assets/js/login.js') }}"></script>
+    <!-- <script src="{{ asset('assets/js/login.js') }}"></script> -->
+
     <script src="{{ asset('assets/js/app.js') }}"></script>
+    @stack('scripts')
 </body>
 
 </html>

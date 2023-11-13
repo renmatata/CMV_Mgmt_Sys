@@ -59,17 +59,18 @@
     --dm: "DM", sans-serif;
     --lato: "Lato", sans-serif;
   
-    --emerald: #50C878;
-    --blue: #3c91e6;
-    --light-blue: #cfe8ff;
-    --grey: #eee;
+    --emerald: #059669;
+    --light-emerald: #C0E5D9;
+    --blue: #057B96;
+    --light-blue: #C0DEE5;
+    --grey: #DFDFDF;
     --dark-grey: #aaaaaa;
     --dark: #342e37;
     --red: #db504a;
     --yellow: #ffce26;
     --light-yellow: #fff2c6;
-    --orange: #fd7238;
-    --light-orange: #ffe0d3;
+    /* --orange: #fd7238;
+    --light-orange: #ffe0d3; */
   }
 
   /*---------------------------------------------*/
@@ -80,9 +81,9 @@
   }
   
   body.dark {
-    --light: #0c0c1e;
-    --grey: #060714;
-    --dark: #fbfbfb;
+    --light-dark: #0c0c1e;
+    --grey-dark: #060714;
+    --dark-dark: #fbfbfb;
   }
 
   a {
@@ -103,7 +104,7 @@
   
   a:hover {
       text-decoration: none;
-    color: #57b846;
+    color: var(--emerald);
   }
   
   /*---------------------------------------------*/
@@ -303,7 +304,7 @@
     width: 100%;
     height: 100%;
     box-shadow: 0px 0px 0px 0px;
-    color: rgba(87,184,70, 0.8);
+    color: var(--emerald);
   }
   
   .input100:focus + .focus-input100 {
@@ -351,7 +352,7 @@
   }
   
   .input100:focus + .focus-input100 + .symbol-input100 {
-    color: #57b846;
+    color: var(--emerald);
     padding-left: 28px;
   }
   
@@ -379,7 +380,7 @@
     width: 100%;
     height: 50px;
     border-radius: 25px;
-    background: #57b846;
+    background: var(--emerald);
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -535,23 +536,26 @@
   }
   
   .sidebar .logo {
-    font-size: 24px;
+    text-decoration: none;
+    font-size: 30px;
     font-weight: 700;
     height: 56px;
     display: flex;
     align-items: center;
-    color: var(--blue);
+    color: var(--emerald);
     position: sticky;
     top: 0;
     left: 0;
     background: var(--light);
     z-index: 500;
-    padding-bottom: 20px;
+    padding: 10px 0 20px 40px;
     box-sizing: content-box;
   }
   
-  .sidebar .logo i {
-    min-width: 60px;
+  .sidebar .logo img {
+    width: 60px;
+    height: 60px;
+    /* min-width: 60px; */
     display: flex;
     justify-content: center;
   }
@@ -605,7 +609,7 @@
     display: flex;
     align-items: center;
     border-radius: 48px;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--dark);
     white-space: nowrap;
     overflow-x: hidden;
@@ -617,11 +621,11 @@
   }
   
   .sidebar .side-menu li.active a {
-    color: var(--blue);
+    color: var(--emerald);
   }
   
   .sidebar .side-menu.top li a:hover {
-    color: var(--blue);
+    color: var(--emerald);
   }
   
   .sidebar .side-menu li a.logout {
@@ -650,7 +654,7 @@
   }
   
   .content nav {
-    height: 56px;
+    height: 75px;
     background: var(--light);
     padding: 0 24px;
     display: flex;
@@ -662,7 +666,15 @@
     left: 0;
     z-index: 1000;
   }
+
+  .content nav a i{
+    font-size: 24px;
+  }
   
+  .content main a i{
+    font-size: 24px;
+  }
+
   .content nav::before {
     content: "";
     position: absolute;
@@ -678,13 +690,13 @@
     color: var(--dark);
   }
   
-  .content nav .fa-bars {
+  .content nav .bx-menu {
     cursor: pointer;
     color: var(--dark);
   }
   
   .content nav .nav-link {
-    font-size: 16px;
+    font-size: 18px;
     transition: 0.3s ease;
   }
   
@@ -705,11 +717,12 @@
   }
   
   .content nav form .form-input input {
+    font-size: 18px;
     flex-grow: 1;
     padding: 0 16px;
     height: 100%;
     border: none;
-    background: var(--grey);
+    background: #D3D3D3;
     border-radius: 36px 0 0 36px;
     outline: none;
     width: 100%;
@@ -722,7 +735,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--blue);
+    background: var(--emerald);
     color: var(--light);
     font-size: 18px;
     border: none;
@@ -736,7 +749,7 @@
     min-width: 50px;
     height: 25px;
     border-radius: 25px;
-    background: var(--grey);
+    background: #D3D3D3;
     cursor: pointer;
     position: relative;
   }
@@ -748,7 +761,7 @@
     left: 2px;
     bottom: 2px;
     width: calc(25px - 4px);
-    background: var(--blue);
+    background: var(--emerald);
     border-radius: 50%;
     transition: 0.3s ease;
   }
@@ -825,15 +838,16 @@
   }
   
   .content main .head-title .left .breadcrumb li a.active {
-    color: var(--blue);
+    color: var(--emerald);
     pointer-events: unset;
   }
   
   .content main .head-title .download-btn {
+    text-decoration: none;
     height: 36px;
     padding: 0 16px;
     border-radius: 36px;
-    background: var(--blue);
+    background: var(--emerald);
     color: var(--light);
     display: flex;
     align-items: center;
@@ -869,13 +883,13 @@
   }
   
   .content main .box-info li:nth-child(1) i {
-    background: var(--light-orange);
-    color: var(--orange);
+    background: var(--light-blue);
+    color: var(--blue);
   }
   
   .content main .box-info li:nth-child(2) i {
-    background: var(--light-blue);
-    color: var(--blue);
+    background: var(--light-emerald);
+    color: var(--emerald);
   }
   
   .content main .box-info li:nth-child(3) i {
@@ -974,7 +988,7 @@
   }
   
   .content main .table-data .order table tr td .status.pending {
-    background: var(--orange);
+    background: var(--blue);
   }
   
   .content main .table-data .order table tr td .status.process {
@@ -982,7 +996,7 @@
   }
   
   .content main .table-data .order table tr td .status.complete {
-    background: var(--blue);
+    background: var(--emerald);
   }
   
   .content main .todo {
@@ -1010,11 +1024,11 @@
   }
   
   .content main .todo .todo-list li.completed {
-    border-left: 10px solid var(--blue);
+    border-left: 10px solid var(--emerald);
   }
   
   .content main .todo .todo-list li.not-completed {
-    border-left: 10px solid var(--orange);
+    border-left: 10px solid var(--blue);
   }
   
   .content main .todo .todo-list li:last-child {
@@ -1031,7 +1045,7 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    background: var(--blue);
+    background: var(--emerald);
     border-radius: 5rem;
   }
   

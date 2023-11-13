@@ -1,7 +1,7 @@
 
 <section class="content">
     <nav>
-        <i class='bx bx-menu'></i>
+        <i class='bx bx-menu' style="font-size: 24px;"></i>
         <a href="#" class="nav-link">Categories</a>
         <form action="#">
             <div class="form-input">
@@ -21,7 +21,7 @@
         </a>
 
         <a href="#" class="profile">
-            <img src="{ asset('assets/images/cmv_logo.png') }}" />
+            <img src="assets/images/admin.png" />
         </a>
     </nav>
 
