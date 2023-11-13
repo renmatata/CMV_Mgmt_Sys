@@ -1,5 +1,4 @@
-
-<section class="content">
+<section class="content" id="maincontent">
     <nav>
         <i class='bx bx-menu' style="font-size: 24px;"></i>
         <a href="#" class="nav-link">Categories</a>

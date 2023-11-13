@@ -1,7 +1,7 @@
 @extends('auth.layout')
 <section class="sidebar">
     <a href="#" class="logo">
-    <img src="{{ asset('assets/images/cmv_logo.png') }}" alt="IMG">
+        <img src="{{ asset('assets/images/cmv_logo.png') }}" alt="IMG">
         <!-- <i class='bx bxs-wink-smile'></i> -->
         <span class="text">CMV</span>
     </a>
@@ -66,4 +66,3 @@
         </li>
     </ul>
 </section>
-
