@@ -1,8 +1,8 @@
-@extends('auth.layout')
-<section class="sidebar">
+<!-- @extends('auth.layout')
+<section class="sidebar" style="width:220px">
     <a href="#" class="logo">
         <img src="{{ asset('assets/images/cmv_logo.png') }}" alt="IMG">
-        <!-- <i class='bx bxs-wink-smile'></i> -->
+        <i class='bx bxs-wink-smile'></i>
         <span class="text">CMV</span>
     </a>
 
@@ -13,10 +13,11 @@
                 <span class="text">Dashboard</span>
             </a>
         </li>
+        <li><a href="{{ url('/reservation') }}">Reservation</a></li>
         <li>
             <a href="#" class="nav-link">
                 <i class='bx bxs-bar-chart-alt-2'></i>
-                <span class="text">Analytics</span>
+                <span class="text">Reservation</span>
             </a>
         </li>
         <li>
@@ -65,4 +66,4 @@
             </a>
         </li>
     </ul>
-</section>
+</section> -->

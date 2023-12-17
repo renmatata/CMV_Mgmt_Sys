@@ -4,34 +4,60 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class AuthManager extends Controller
 {
-    function login()
-    {
-        return view('auth.login');
-    }
+    // function login()
+    // {
+    //     return view('auth.login');
+    // }
 
     function register()
     {
         return view('auth.register');
     }
 
-    public function loginPost(Request $request)
+    public function registerPost(Request $request)
     {
-        $request->validate([
-            'username' => 'required',
-            'password' => 'required'
+           // Validate the user input
+           $request->validate([
+            'name' => 'required|string|max:255',
+            'username' => 'required|string|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
         ]);
 
-        $credentials = $request->only('username', 'password');
-        if (Auth::attempt($credentials)) {
-            // return view('home');
-            // return redirect()->route('home');
-            return redirect()->intended(route('home'));
-        }
-        return redirect(route('login'))->with("error", "Login failed");
+        // Create a new user
+        $user = User::create([
+            'name' => $request->input('name'),
+            'username' => $request->input('username'),
+            'email' => $request->input('email'),
+            'password' => Hash::make($request->input('password')),
+        ]);
+
+        // Optionally log in the newly registered user
+        auth()->login($user);
+
+        // Redirect the user to a dashboard or another page
+        return redirect()->route('login')->with('success', 'Registration successful!');
     }
+    // public function loginPost(Request $request)
+    // {
+    //     $request->validate([
+    //         'username' => 'required',
+    //         'password' => 'required'
+    //     ]);
+
+    //     $credentials = $request->only('username', 'password');
+    //     if (Auth::attempt($credentials)) {
+    //         return view('home');
+    //         return redirect()->route('home');
+    //         return redirect()->intended(route('home'));
+    //     }
+    //     return redirect(route('login'))->with("error", "Login failed");
+    // }
 
     public function logout()
     {

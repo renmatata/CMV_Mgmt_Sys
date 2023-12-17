@@ -1,4 +1,4 @@
-<section class="content" id="maincontent">
+<!-- <section class="content" id="maincontent">
     <nav>
         <i class='bx bx-menu' style="font-size: 24px;"></i>
         <a href="#" class="nav-link">Categories</a>
@@ -16,7 +16,7 @@
 
         <a href="#" class="notification">
             <i class='bx bxs-bell'></i>
-            <!-- <span class="num">28</span> -->
+            <span class="num">28</span>
         </a>
 
         <a href="#" class="profile">
@@ -162,4 +162,4 @@
             </div>
         </div>
     </main>
-</section>
+</section> -->

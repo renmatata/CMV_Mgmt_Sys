@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\AuthManager;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -21,11 +22,30 @@ Route::get('/', function () {
 
 // Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('/home', 'HomeController@index')->middleware('home');
+// Registration routes
 
-Route::get('/login', [AuthManager::class, 'login'])->name('login'); 
-Route::post('/login', [AuthManager::class, 'loginPost'])->name('login.post'); 
-Route::get('/register',[AuthManager::class, 'register'])->name('register');
-Route::get('/logout',[AuthManager::class, 'logout'])->name('logout');
-Route::get('/sidebar-menu', 'SidebarMenuController@getSidebarMenu');
+// Route::get('/register', [AuthManager::class, 'register'])->name('register');
+// Route::post('/register', [AuthManager::class, 'registerPost'])->name('register.post');
+
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route::get('/reservation', [App\Http\Controllers\HomeController::class, 'showReservation'])->name('reservation');
+
+// Route::get('/register', [AuthManager::class, 'register'])->name('register');
+// Route::get('/logout', [AuthManager::class, 'logout'])->name('logout');
+// Route::get('/sidebar-menu', 'SidebarMenuController@getSidebarMenu');
+
+
+Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function () {
+    
+    Route::match(['get', 'post'], 'login', 'AdminController@login');
+    Route::group(['middleware' =>['admin']], function(){
+        Route::get('dashboard', 'AdminController@dashboard');
+        Route::get('logout', 'AdminController@logout');
+
+    });
+
+    // Route::get('/login', [AuthManager::class, 'login'])->name('login');
+    // Route::post('/login', [AuthManager::class, 'loginPost'])->name('login.post');
+});
