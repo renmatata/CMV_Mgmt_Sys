@@ -43,21 +43,6 @@ class AuthManager extends Controller
         // Redirect the user to a dashboard or another page
         return redirect()->route('login')->with('success', 'Registration successful!');
     }
-    // public function loginPost(Request $request)
-    // {
-    //     $request->validate([
-    //         'username' => 'required',
-    //         'password' => 'required'
-    //     ]);
-
-    //     $credentials = $request->only('username', 'password');
-    //     if (Auth::attempt($credentials)) {
-    //         return view('home');
-    //         return redirect()->route('home');
-    //         return redirect()->intended(route('home'));
-    //     }
-    //     return redirect(route('login'))->with("error", "Login failed");
-    // }
 
     public function logout()
     {

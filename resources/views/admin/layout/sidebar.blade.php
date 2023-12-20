@@ -14,14 +14,14 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ url('admin/dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                <i class="fas fa-fw fa-table"></i>
+                <a class="nav-link" href="{{ route('admin.pages.reservations') }}">
+                <i class="fas fa-fw fa-cog"></i>
                     <span>Reservations</span></a>
             </li>
 
@@ -36,17 +36,17 @@
             <!-- Nav Item - Pages Collapse Menu -->
 
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ route('admin.pages.entrancefee') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Entrance Fee</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ route('admin.pages.restobar') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Restobar</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ route('admin.pages.venue') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Venue</span></a>
             </li>
@@ -116,18 +116,18 @@
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tables</span></a>
-            </li>
+            </li> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

@@ -10325,3 +10325,7 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
     width: 100%;
 }
+
+.form-group.placeholder{
+    color: #8A8C9A;
+  }
