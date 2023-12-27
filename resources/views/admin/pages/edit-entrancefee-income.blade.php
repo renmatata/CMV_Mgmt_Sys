@@ -21,38 +21,40 @@
         </div>
         @endif
 
-        <form action="{{ route('admin.entrancefee.store') }}" id="ReservationForm" name="ReservationForm" class="form-horizontal" method="post" enctype="multipart/form-data">@csrf
+        <form action="{{ route('admin.entrancefee.update', $entrancefee->id }}" class="form-horizontal" method="get" enctype="multipart/form-data">
+            @csrf 
+            @method('PUT')
             <div class="header">
                 <h5 style="color:black">Add Income</h5><br>
             </div>
-            <input type="hidden" name="id" id="id">
+            <input type="hidden" name="id" id="id" value="{{$entrancefee->id }}">
             <div class="form-group">
                 <label class="col-sm-2 control-label">Date</label>
                 <div class="col-sm-12">
-                    <input type="date" class="form-control" id="date" name="date" placeholder="Select date">
+                    <input type="date" class="form-control" id="date" name="date" value="{{ $entrancefee->date }}" placeholder="Select date">
                 </div>
             </div>
             <div class="form-group">
                 <label for="kids" class="col-sm-2 control-label">Student/Senior</label>
                 <div class="col-sm-12">
-                    <input type="number" class="form-control" id="kids" name="kids" placeholder="Number of guest" maxlength="5">
+                    <input type="number" class="form-control" id="kids" name="kids" value="{{ $entrancefee->kids }}" placeholder="Number of guest" maxlength="5">
                 </div>
             </div>
             <div class="form-group">
                 <label for="adults" class="col-sm-2 control-label">Adults</label>
                 <div class="col-sm-12">
-                    <input type="number" class="form-control" id="adults" name="adults" placeholder="Number of guest" maxlength="5">
+                    <input type="number" class="form-control" id="adults" name="adults" value="{{ $entrancefee->adults }}" placeholder="Number of guest" maxlength="5">
                 </div>
             </div>
             <div class="form-group">
                 <label for="amount" class="col-sm-2 control-label">Amount</label>
                 <div class="col-sm-12">
-                    <input id="amount" name="amount" style="width: 100%;" readonly></input>
+                    <input id="amount" name="amount" value="{{ $entrancefee->amount }}" style="width: 100%;" readonly></input>
                     <!-- <input type="number" class="form-control" id="amount" name="amount" placeholder="Total amount" maxlength="5"> -->
                 </div>
             </div>
             <div class="col-sm-offset-2 col-sm-10 justify-content-md-end"><br />
-                <button type="submit" class="btn btn-primary" id="btn-save">Add</button>
+                <button type="submit" class="btn btn-primary" id="btn-save">Update</button>
             </div>
         </form>
     </div>

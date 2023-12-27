@@ -23,6 +23,8 @@
     <!-- Custom styles for this template-->
     <link href="{{ url ('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
+    <link href="{{ url ('admin/css/app.css') }}" rel="stylesheet">
+
     <!-- Custom styles for dataTables -->
     <link href="{{ url ('admin/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
@@ -101,6 +103,8 @@
     <script src="{{ url ('admin/vendor/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ url ('admin/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
+    <!-- Custom scripts -->
+    <script src="{{ url ('admin/js/calculate.js') }}"></script>
 
     <script>
         $(document).ready(function() {
@@ -113,6 +117,34 @@
             }
         });
     </script>
+
+    <script>
+        $(document).ready(function() {
+            // Add the "active" class to the clicked menu item
+            $('ul li').click(function() {
+                $('ul li').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+    <script>
+    $(document).ready(function() {
+        // Get the current URL
+        var currentUrl = window.location.href;
+
+        // Loop through each menu item
+        $('ul li').each(function() {
+            // Get the menu item's link
+            var menuItemLink = $(this).find('a').attr('href');
+
+            // Check if the current URL contains the menu item's link
+            if (currentUrl.includes(menuItemLink)) {
+                // Add the "active" class to the menu item
+                $(this).addClass('active');
+            }
+        });
+    });
+</script>
 </body>
 
 </html>

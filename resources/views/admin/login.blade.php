@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Login V1</title>
+    <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ url ('login/css/bootstrap.min.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url ('login/css/bootstrap.min.css') }}"> -->
     <!--===============================================================================================-->
     <!-- <link rel="stylesheet" type="text/css" href="css/util.css"> -->
     <link rel="stylesheet" type="text/css" href="{{ url ('login/css/app.css') }}">
@@ -19,6 +19,9 @@
         <div class="container-login100">
 
             <div class="wrap-login100">
+                <div class="logo-name">
+                    <h1>Catigbian Mountainview</h1>
+                </div>
                 <div class="login100-pic js-tilt" data-tilt>
                     <img src="{{ url('login/images/cmv_logo.png') }}" alt="IMG">
                 </div>
@@ -47,12 +50,12 @@
 
                     <div class="container-login100-form-btn">
                         <button type="submit" class="login100-form-btn">
-                            
+
                             {{ __('Login') }}
                         </button>
                     </div>
 
-                    <div class="text-center p-t-12">
+                    <div class="text-center p-t-12" style="text-align: center;">
                         <span class="txt1">
                             Forgot
                         </span>
@@ -72,18 +75,19 @@
         </div>
     </div>
 
-<!--===============================================================================================-->	
-<script src="{{ url('login/js/jquery-3.2.1.min.js') }}"></script>
-<!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <script src="{{ url('login/js/jquery-3.2.1.min.js') }}"></script>
+    <!--===============================================================================================-->
     <script src="{{ url('login/js/tilt.jquery.min.js') }}"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.2
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="{{ url('login/js/login.js') }}"></script>
-	<script src="{{ url('login/js/app.js') }}"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.2
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="{{ url('login/js/login.js') }}"></script>
+    <script src="{{ url('login/js/app.js') }}"></script>
 
 </body>
+
 </html>

@@ -15,6 +15,7 @@ class EntrancefeeController extends Controller
     public function index()
     {
         $entrancefees = Entrancefee::all();
+
         return view('admin.pages.entrancefee', compact('entrancefees'));
     }
 
@@ -32,6 +33,7 @@ class EntrancefeeController extends Controller
     public function store(EntrancefeeStoreRequest $request)
     {
         Entrancefee::create([
+            'id' => $request->id,
             'date' => $request->date,
             'kids' => $request->kids,
             'adults' => $request->adults,
@@ -52,17 +54,34 @@ class EntrancefeeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Entrancefee $entrancefee)
     {
-        //
+        return view('admin.pages.edit-entrancefee-income', compact('entrancefee'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Entrancefee $entrancefee)
     {
-        //
+        $request->validate([
+            'id' => 'required',
+            'date' => 'required',
+            'kids' => 'required',
+            'adults' => 'required',
+            'amount' => 'required'
+        ]);
+
+        $entrancefee->update([
+            'id' => $request->id,
+            'date'=> $request->date,
+            'kids'=> $request->kids,
+            'adults'=> $request->adults,
+            'amount'=> $request->amount
+
+        ]);
+
+        return to_route('admin.pages.entrancefee');
     }
 
     /**

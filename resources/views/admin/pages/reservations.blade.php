@@ -50,7 +50,17 @@
                             <td>{{ $reservation->type}}</td>
                             <td>{{ $reservation->date}}</td>  
                             <td>{{ $reservation->pax}}</td>  
-                            <td>{{ $reservation->status}}</td>  
+                            <td>{{ $reservation->status}}</td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                                    <form method="post" action="#" onsubmit="return confirm('Are you sure');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm ms-10">Archive</button>
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

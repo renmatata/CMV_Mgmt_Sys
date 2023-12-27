@@ -36,12 +36,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($venues as $venues)
+                        @foreach ($venues as $venue)
                         <tr>
-                            <td>{{ $venues->id}}</td>
-                            <td>{{ $venues->date}}</td>
-                            <td>{{ $venues->name}}</td>
-                            <td>{{ $venues->amount}}</td>
+                            <td>{{ $venue->id}}</td>
+                            <td>{{ $venue->date}}</td>
+                            <td>{{ $venue->name}}</td>
+                            <td>{{ $venue->amount}}</td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <a href="{{ route('admin.venue.edit', $venue->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                                    <form method="post" action="{{ route('admin.venue.destroy', $venue) }}" onsubmit="return confirm('Are you sure');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm ms-10">Archive</button>
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

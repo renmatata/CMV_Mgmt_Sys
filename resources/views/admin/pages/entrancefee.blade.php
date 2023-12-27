@@ -30,7 +30,7 @@
                         <tr>
                             <th>Id</th>
                             <th>Date</th>
-                            <th>Kids</th>
+                            <th>Student/Senior</th>
                             <th>Adults</th>
                             <th>Amount</th>
                             <th>Actions</th>
@@ -43,7 +43,17 @@
                             <td>{{ $entrancefee->date}}</td>
                             <td>{{ $entrancefee->kids}}</td>
                             <td>{{ $entrancefee->adults}}</td>
-                            <td>{{ $entrancefee->amount}}</td>  
+                            <td>{{ $entrancefee->amount}}</td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <a href="{{ route('admin.entrancefee.edit', $entrancefee->id ) }}" class="btn btn-primary btn-sm">Edit</a>
+                                    <form method="post" action="{{ route('admin.entrancefee.destroy', $entrancefee) }}" onsubmit="return confirm('Are you sure');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm ms-10">Archive</button>
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

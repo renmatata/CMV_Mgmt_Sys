@@ -3,15 +3,23 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Restobar;
+use App\Models\Venue;
 use Database\Seeders\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use App\Models\Entrancefee;
 
 class AdminController extends Controller
 {
     public function dashboard(){
-        return view('admin.dashboard');
+
+        $totalEntrancefee = Entrancefee::sum('amount');
+        $totalRestobarIncome = Restobar::sum('amount');
+        $totalVenueIncome = Venue::sum('amount');
+
+        return view('admin.dashboard', compact('totalEntrancefee', 'totalRestobarIncome', 'totalVenueIncome'));
     }
 
     public function login(Request $request){
